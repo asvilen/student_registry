@@ -1,0 +1,22 @@
+name: Start and test the application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Add Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: latest
+    - run: npm intall
+    - run: npm start
+    - run: npm test

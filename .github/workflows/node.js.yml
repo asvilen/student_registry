@@ -18,5 +18,4 @@ jobs:
       with:
         node-version: latest
     - run: npm install
-    - run: npm start
     - run: npm test

@@ -12,10 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
     - name: Add Node.js
       uses: actions/setup-node@v4
       with:
         node-version: latest
-    - run: npm install
-    - run: npm test
+    - name: Install npm
+      run: npm install
+    - name: Run tests
+      run: npm test

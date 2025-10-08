@@ -22,3 +22,9 @@ jobs:
       run: npm install
     - name: Run tests
       run: npm test
+    - name: Deploy on Render
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.SERVICE_ID }}
+        api-key: ${{ secrets.RENDER_TOKEN }}
+        wait-for-success: true

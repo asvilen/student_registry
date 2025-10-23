@@ -2,16 +2,11 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
         
         stage('Build') {
             steps {
                 sh 'npm install'  // or your build command
-                sh 'npm run start'
+                sh 'npm run start &'
             }
         }
         

@@ -22,7 +22,7 @@ pipeline {
             }
             steps {
                 sh 'echo "Deploying to production..."'
-                // Add your deployment commands here
+                // Add your deployment commands
             }
         }
     }
